@@ -1,4 +1,4 @@
-const { double,filterEven ,sum} = require('../src/arrays');
+const { double,filterEven ,sum , deleteNth} = require('../src/arrays');
 
 describe("double", () => {
 	test("doubles every number in the array", () => {
@@ -15,5 +15,11 @@ describe("filterEven", () => {
 describe("sum", () => {
 	test("returns the sum of the array", () => {
 		expect(sum([1, 2, 3])).toBe(6);
+	});
+});
+
+describe("deleteNth", () => {
+	test("limits duplicates to n times", () => {
+		expect(deleteNth([1, 2, 3, 1, 2, 1], 2)).toEqual([1, 2, 3, 1, 2]);
 	});
 });

@@ -10,8 +10,17 @@ function sum(arr) {
 	return arr.reduce((acc, num) => acc + num, 0);
 }
 
+function deleteNth(arr, n) {
+	const count = {};
+	return arr.filter((num) => {
+		count[num] = (count[num] || 0) + 1;
+		return count[num] <= n;
+	});
+}
+
 module.exports = {
-  double,
-  filterEven,
-  sum
+	double,
+	filterEven,
+	sum,
+	deleteNth,
 };
