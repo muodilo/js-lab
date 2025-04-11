@@ -2,4 +2,16 @@ function fullName(person) {
 	return `${person.firstName} ${person.lastName}`;
 }
 
-module.exports = { fullName };
+function isAdult(person) {
+	return person.age >= 18;
+}
+
+function filterByAge(people, minAge) {
+	return people.filter((person) => person.age >= minAge);
+}
+
+module.exports = {
+  fullName,
+  isAdult,
+  filterByAge
+};
