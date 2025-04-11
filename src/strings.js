@@ -35,9 +35,18 @@ function wordFrequency(string) {
 	return frequencyMap;
 }
 
+function pascalToSnake(str) {
+	if (typeof str !== "string") return String(str);
+	return str
+		.replace(/([A-Z])/g, "_$1")
+		.replace(/^_/, "")
+		.toLowerCase();
+}
+
 module.exports = {
 	capitalize,
 	reverse,
 	isPalindrome,
-	wordFrequency,
+  wordFrequency,
+  pascalToSnake
 };
