@@ -14,5 +14,6 @@ function isPalindrome(string) {
 
 module.exports = {
   capitalize,
-  reverse
+  reverse,
+  isPalindrome
 };
