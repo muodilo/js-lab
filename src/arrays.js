@@ -18,9 +18,15 @@ function deleteNth(arr, n) {
 	});
 }
 
+function average(arr) {
+	if (arr.length === 0) return 0;
+	return sum(arr) / arr.length;
+}
+
 module.exports = {
 	double,
 	filterEven,
 	sum,
-	deleteNth,
+  deleteNth,
+  average
 };
